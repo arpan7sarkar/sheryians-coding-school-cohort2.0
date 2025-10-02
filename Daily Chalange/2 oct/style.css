@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right,#96afb0,#f8e4d2);
+    position: absolute;
+    z-index: -2;
+    font-family:arch;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: linear-gradient(90deg, #c4d6dd, #f3e5d8);
+    color: #333;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.app-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: transparent;
+    border: 1px solid #888;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.app-button img {
+    height: 20px;
+}
+#main{
+    height: 100%;
+    width: 100%;
+}
+
+#main #shirt img{
+    z-index: -1;
+    height: 70vh;
+    width: 40vw;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+
+#main #card {
+    width: 9vw; 
+    background-color:  rgba(255, 255, 255, 0.7); 
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(10px); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 70%;
+    left: 85%;
+    transform: translate(-50%,-50%);
+    opacity: 70%;
+}
+
+#main #card img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    margin-bottom: 10px; 
+}
+
+#main #card .content {
+    color: #333;
+    padding: 0 10px; 
+}
+
+#main #card .number {
+    font-size: 3vw;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#main #card .text {
+    font-size: .8vw;
+    line-height: 1.3;
+    opacity: 0.8;
+}
