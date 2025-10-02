@@ -1,23 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+body {
+    font-family: 'Zalando Sans', cursive;
+}
 *{
     margin: 0;
     padding: 0;
 }
 
-html,body{
+html, body {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(to top right,#96afb0,#f8e4d2);
+    min-height: 100%;
+    background: linear-gradient(to top right,rgb(167, 210, 227),rgb(112, 192, 207),#ace3e5,rgb(238, 225, 215),rgb(248, 226, 208),rgb(248, 226, 210));
     position: absolute;
     z-index: -2;
-    font-family:arch;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    background: linear-gradient(90deg, #c4d6dd, #f3e5d8);
+    background: transparent;
     color: #333;
 }
 
@@ -54,6 +75,11 @@ html,body{
     cursor: pointer;
 }
 
+.app-button:hover {
+    background-color: #f7d8be;
+    border-color: #666;
+}
+
 .app-button img {
     height: 20px;
 }
@@ -61,17 +87,97 @@ html,body{
     height: 100%;
     width: 100%;
 }
-
-#main #shirt img{
-    z-index: -1;
-    height: 70vh;
-    width: 40vw;
+#main .info{
+    padding: 80px 60px 24px 60px;
     position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    left: 14%;
+}
+#main .info #star{
+    margin-top: 5vh;
+    position: absolute;
+    top: 90%;
+    height: 4vh;
+    width: 4vw;
 }
 
+#main .flot{
+    z-index: 1;
+    position: absolute;
+    top:24%;
+    left: 33%;
+    font-size: 1vw;
+    font-style: italic;
+    display: flex;
+    font-weight: 200;
+}
+
+#main .flot img{
+    width: 2vw;
+}
+#main .flot2{
+    position: absolute;
+    top:50%;
+    left: 57%;
+    font-size: 1vw;
+    font-style: italic;
+    display: flex;
+    font-weight: 200;
+    z-index: 2;
+}
+#main .flot2 img{
+    width: 2vw;
+}
+
+
+#main #shirt img{
+    z-index: 1;
+    height: 72vh;
+    width: 40vw;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    opacity: 90%;
+    transform: translate(-50%,-50%);
+}
+#main .info{
+    padding: 80px 60px 24px 60px;
+}
+#main #star{
+    display: flex;
+    font-size:25px;
+    gap: 8px;
+    
+}
+#main #container{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 59%;
+    left: 29%;
+    transform: translate(-50%,-50%);
+}
+#care{
+    color: white;
+    font-size: 113px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    letter-spacing: -.3vw; 
+    position: absolute;
+    top: 41%;
+    left: 42%;
+    z-index: 2;
+}
+#main #container .txts{
+    color: white;
+    font-size: 45px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: -.3vw; 
+}
 
 
 
@@ -82,13 +188,11 @@ html,body{
     padding: 15px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    /* backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(10px); */
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 70%;
+    top: 68%;
     left: 85%;
     transform: translate(-50%,-50%);
     opacity: 70%;
@@ -116,4 +220,33 @@ html,body{
     font-size: .8vw;
     line-height: 1.3;
     opacity: 0.8;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 60px;
+    background-color: #141d20;
+}
+.boxs img{
+ width: 30px;
+ border-radius: 4px;
+}
+.boxs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+button{
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover{
+    background-color: #ccc;
+    cursor: pointer;
 }
