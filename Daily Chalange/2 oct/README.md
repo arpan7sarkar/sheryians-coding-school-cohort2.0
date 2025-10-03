@@ -13,4 +13,6 @@ This is a simple web page that displays the text "Let's make a change". The text
 1. Clone the repository
 2. Open the index.html file in a web browser
 
-Deployed link: https://cleanpro-landingpage-arpan.netlify.app/
+## Demo Photo
+<img src="demo.png" alt="demo photo of the web page">
+<p>Deployed link: <a href="https://cleanpro-landingpage-arpan.netlify.app/">https://cleanpro-landingpage-arpan.netlify.app/</a></p>
