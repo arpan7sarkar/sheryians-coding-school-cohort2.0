@@ -311,12 +311,18 @@ html,body{
     position: absolute;
     width: 30vw;
    }
-   .responsive-logo-main{
-    position: absolute;
-    width: 40vw;
-    top: -7vw;
-    left: -5vw;
-   }
+    .responsive-logo-main{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+   position: absolute;
+   font-family: nothing_main;
+   text-transform: uppercase;
+   left: 5.5vw;
+   font-size: 5vw;
+   top: 2.3vw;
+     
+    }
    .icons{
     display: block;
     align-items: center;
