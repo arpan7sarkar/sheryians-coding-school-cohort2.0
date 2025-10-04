@@ -2,6 +2,8 @@
 
 A minimal, elegant static clone inspired by the Nothing Phone (visual concept) — a tiny HTML/CSS landing layout created for practice and demonstration.
 
+<p>Access link: <a href="https://nothing-static-clone-arpan.netlify.app/">https://nothing-static-clone-arpan.netlify.app/</a></p>
+
 ## Mobile and desktop views
 
 <img src="demo/mobile_view.png" alt="Mobile view of the page" width="250">
