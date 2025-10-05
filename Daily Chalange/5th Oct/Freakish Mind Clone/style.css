@@ -1,0 +1,1130 @@
+/* --- FONT AND GLOBAL STYLES --- */
+@font-face {
+    font-family: 'lufga';
+    src: url(./font/LufgaRegular.ttf);
+}
+
+@font-face {
+    font-family: 'lufga-light';
+    src: url(./font/LufgaLight.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    background: linear-gradient(to bottom, #111, rgba(26, 26, 26, 0.5));
+    position: relative;
+}
+
+/* --- NAVIGATION BAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: relative;
+}
+
+.nav-brand h1 {
+    font-size: 30px;
+    font-family: 'lufga-light';
+    color: #fff;
+    font-weight: 300;
+}
+
+.nav-links {
+    border: 1px solid #1f1f1f;
+    border-radius: 25px;
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 20px 50px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'lufga-light';
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.nav-link span::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #d5f803;
+    box-shadow: 0 0 8px #d5f803, 0 0 15px #d5f803, 0 0 25px #d5f803;
+    transition: width 0.4s ease;
+}
+
+.nav-link:hover span::before {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #d5f803;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-actions i {
+    color: #fff;
+    font-size: 22px;
+}
+
+.connect-wallet-btn {
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: 1px solid #d5f803;
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'lufga-light';
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.connect-wallet-btn:hover {
+    background-color: #d5f803;
+    color: #000;
+    box-shadow: 0 0 20px rgba(213, 248, 3, 0.5);
+}
+
+.menu-toggle {
+    display: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* --- HERO CONTENT --- */
+.hero-content {
+    padding: 60px 20px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    color: #fff;
+    font-size: 60px;
+    font-family: 'lufga-light';
+    font-weight: 100;
+}
+
+.hero-content h1:nth-of-type(2) {
+    font-family: 'lufga';
+}
+
+.hero-content h1 img {
+    height: 40px;
+}
+
+.down-arrow {
+    position: absolute;
+    top: 20vw;
+    left: 20vw;
+}
+
+.down-arrow img {
+    width: 90px;
+}
+
+/* --- INFO BOXES --- */
+.info-box-left {
+    position: absolute;
+    top: 30vw;
+    left: 0;
+}
+
+.info-circle {
+    padding: 20px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-circle p {
+    font-family: 'lufga-light';
+    color: #fff;
+    font-weight: 100;
+}
+
+.circle-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #1f1f1f;
+}
+
+.circle-image img {
+    position: absolute;
+    top: 1vw;
+    left: 1.3vw;
+    height: 120px;
+}
+
+.hero-image {
+    padding: 80px;
+    text-align: center;
+}
+
+.hero-image img {
+    height: 35vw;
+    max-width: 100%;
+}
+
+.info-box-right {
+    position: absolute;
+    top: 30vw;
+    right: 7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.stats h2 {
+    color: #fff;
+    font-family: 'lufga-light';
+    font-size: 40px;
+}
+
+.stats h2 span {
+    color: #d5f803;
+}
+
+.stats p {
+    color: #d5f803;
+    font-family: 'lufga-light';
+}
+
+.stats:nth-child(1) p,
+.stats:nth-child(2) p {
+    border-bottom: 2px solid #d5f803;
+    padding-bottom: 30px;
+    display: inline-block;
+    width: 150px;
+}
+
+.circular-logo {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: #1f1f1f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-logo img {
+    height: 45px;
+}
+
+.circular-text-svg {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* --- TRENDING SECTION --- */
+.trending-section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    padding: 150px 60px;
+    position: relative;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-text h3 {
+    color: #d5f803;
+    font-size: 16px;
+    font-family: 'lufga-light';
+}
+
+.header-text h1 {
+    color: #fff;
+    font-size: 40px;
+    font-family: 'lufga-light';
+}
+
+.header-description p {
+    color: #fff;
+    font-family: 'lufga-light';
+}
+
+.slider-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.slider-controls button {
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-controls i {
+    font-size: 40px;
+}
+
+.slider-btn-left {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: white;
+}
+
+.slider-btn-left:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.slider-btn-right {
+    border: none;
+    background-color: #d5f803;
+    color: #000;
+}
+
+.slider-btn-right:hover {
+    background-color: #b8d403;
+}
+
+.trending-section .down-arrow {
+    position: absolute;
+    top: 15vw;
+    left: 25vw;
+}
+
+/* --- NFT CARDS --- */
+.nft-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 180px;
+    flex-wrap: wrap;
+}
+
+.nft-card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-container {
+    width: 350px;
+    height: 450px;
+    background-color: #1f1f1f;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 20px;
+}
+
+.card {
+    position: relative;
+    width: 280px;
+    height: 380px;
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 380px;
+    border-radius: 20px;
+    clip-path: polygon(36% 0, 54% 15%, 100% 15%, 100% 66%, 100% 100%, 49% 100%, 49% 87%, 0 87%, 0% 35%, 0 0);
+}
+
+.card-background.purple {
+    background: linear-gradient(135deg, #8b00ff 0%, #5500cc 100%);
+}
+
+.card-background.yellow {
+    background: linear-gradient(135deg, #d5f803 0%, #a8c503 100%);
+}
+
+.card-background.orange {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%);
+}
+
+.card-details {
+    position: relative;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    left: -80px;
+    top: 60px;
+    background-color: #d5f803;
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-family: 'lufga-light';
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nft-card-item:nth-child(2) .badge {
+    background-color: #ff6b35;
+    color: #fff;
+}
+
+.timer-box {
+    text-align: right;
+    color: #fff;
+    font-family: 'lufga-light';
+}
+
+.timer-box span:first-child {
+    display: block;
+    font-size: 12px;
+    opacity: 0.8;
+    text-align: left;
+}
+
+.time-text {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.card-main-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-main-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card-bottom {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.price-info {
+    position: absolute;
+    right: 11vw;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-family: 'lufga-light';
+    font-size: 16px;
+}
+
+.price-info i {
+    color: #d5f803;
+    font-size: 20px;
+}
+
+.bid-button {
+    width: 280px;
+    padding: 18px 60px;
+    border-radius: 15px;
+    font-family: 'lufga-light';
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.bid-button.purple {
+    background-color: transparent;
+    color: #8b00ff;
+    border: 2px solid #8b00ff;
+}
+
+.bid-button.purple:hover {
+    background-color: #8b00ff;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(139, 0, 255, 0.5);
+}
+
+.bid-button.yellow {
+    background-color: transparent;
+    color: #d5f803;
+    border: 2px solid #d5f803;
+}
+
+.bid-button.yellow:hover {
+    background-color: #d5f803;
+    color: #000;
+    box-shadow: 0 0 20px rgba(213, 248, 3, 0.5);
+}
+
+.bid-button.orange {
+    background-color: transparent;
+    color: #ff6b35;
+    border: 2px solid #ff6b35;
+}
+
+.bid-button.orange:hover {
+    background-color: #ff6b35;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+/* --- RESPONSIVE STYLES --- */
+
+/* TABLET (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 20px 30px;
+        gap: 40px;
+    }
+
+    .nav-brand h1 {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        gap: 40px;
+        padding: 15px 30px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .connect-wallet-btn {
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 5vw;
+    }
+
+    .hero-content h1 img {
+        height: 32px;
+    }
+
+    .down-arrow {
+        top: 34vw;
+    }
+
+    .trending-section .down-arrow {
+        top: 20vw;
+    }
+
+    .info-box-left {
+        top: 35vw;
+    }
+
+    .info-circle {
+        margin-left: 20px;
+        margin-top: 50px;
+    }
+
+    .circle-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .circle-image img {
+        height: 100px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .info-box-right {
+        top: 35vw;
+        right: 5vw;
+    }
+
+    .stats h2 {
+        font-size: 32px;
+    }
+
+    .trending-section {
+        padding: 100px 40px;
+    }
+
+    .header-text h1 {
+        font-size: 32px;
+    }
+
+    .nft-cards-container {
+        gap: 25px;
+        margin-top: 120px;
+    }
+
+    .card-container {
+        width: 300px;
+        height: 400px;
+    }
+
+    .card {
+        width: 240px;
+        height: 340px;
+    }
+
+    .card-background {
+        width: 240px;
+        height: 340px;
+    }
+
+    .card-main-image img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .timer-box {
+        margin-top: -10px;
+    }
+
+    .price-info {
+        right: 15vw;
+    }
+
+    .bid-button {
+        width: 240px;
+    }
+
+    .badge {
+        left: -70px;
+        top: 50px;
+    }
+}
+
+/* MOBILE (481px - 767px) */
+@media screen and (max-width: 767px) {
+    .hero-section {
+        padding: 20px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-brand h1 {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        margin-top: 10px;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-actions {
+        gap: 15px;
+    }
+
+    .connect-wallet-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content {
+        padding-top: 80px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content h1 img {
+        height: 24px;
+    }
+
+    .down-arrow {
+        display: none;
+    }
+
+    .info-box-left {
+        position: static;
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+
+    .info-circle {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .circle-image {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+    }
+
+    .circle-image img {
+        height: 80px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .info-circle p br {
+        display: none;
+    }
+
+    .hero-image {
+        padding: 40px 20px;
+    }
+
+    .hero-image img {
+        height: auto;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .info-box-right {
+        position: static;
+        margin-top: 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 20px;
+    }
+
+    .stats {
+        flex: 0 0 45%;
+    }
+
+    .stats h2 {
+        font-size: 28px;
+    }
+
+    .stats:nth-child(1) p,
+    .stats:nth-child(2) p {
+        width: auto;
+        padding-bottom: 15px;
+    }
+
+    .circular-logo {
+        margin-top: 30px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .circular-logo img {
+        height: 40px;
+    }
+
+    .circular-text-svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .trending-section {
+        padding: 80px 20px;
+    }
+
+    .trending-section .down-arrow {
+        display: none;
+    }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .header-text h1 {
+        font-size: 28px;
+    }
+
+    .header-description p br {
+        display: none;
+    }
+
+    .slider-controls {
+        align-self: center;
+    }
+
+    .slider-controls i {
+        font-size: 32px;
+    }
+
+    .nft-cards-container {
+        margin-top: 80px;
+        gap: 40px;
+    }
+
+    .card-container {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .badge {
+        left: -60px;
+        top: 45px;
+        font-size: 11px;
+    }
+}
+
+/* SMALL MOBILE (320px - 480px) */
+@media screen and (max-width: 480px) {
+    .nav-brand h1 {
+        font-size: 16px;
+    }
+
+    .nav-actions i {
+        font-size: 20px;
+    }
+
+    .hero-content {
+        padding-top: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .hero-content h1 img {
+        height: 18px;
+    }
+
+    .info-circle {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .circle-image {
+        width: 90px;
+        height: 90px;
+    }
+
+    .circle-image img {
+        height: 70px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .info-circle p {
+        font-size: 14px;
+    }
+
+    .hero-image {
+        padding: 30px 15px;
+    }
+
+    .stats {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+
+    .stats h2 {
+        font-size: 24px;
+    }
+
+    .stats p {
+        font-size: 14px;
+    }
+
+    .circular-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .circular-logo img {
+        height: 35px;
+    }
+
+    .circular-text-svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .trending-section {
+        padding: 60px 15px;
+    }
+
+    .header-text h3 {
+        font-size: 14px;
+    }
+
+    .header-text h1 {
+        font-size: 24px;
+    }
+
+    .header-description p {
+        font-size: 14px;
+    }
+
+    .slider-controls button {
+        padding: 12px;
+    }
+
+    .slider-controls i {
+        font-size: 28px;
+    }
+
+    .nft-cards-container {
+        margin-top: 60px;
+    }
+
+    .card-container {
+        width: 100%;
+        max-width: 320px;
+        height: 380px;
+        padding: 30px 15px;
+    }
+
+    .card {
+        width: 220px;
+        height: 320px;
+    }
+
+    .card-background {
+        width: 220px;
+        height: 320px;
+    }
+
+    .card-details {
+        padding: 15px;
+    }
+
+    .badge {
+        left: -50px;
+        top: 40px;
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+
+    .timer-box span:first-child {
+        font-size: 11px;
+    }
+
+    .time-text {
+        font-size: 12px;
+    }
+
+    .card-main-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .card-main-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .price-info {
+        font-size: 14px;
+        right: 30vw;
+    }
+
+    .price-info i {
+        font-size: 18px;
+    }
+
+    .bid-button {
+        width: 220px;
+        padding: 15px 40px;
+        font-size: 14px;
+    }
+}
+
+/* EXTRA SMALL MOBILE (max 360px) */
+@media screen and (max-width: 360px) {
+    .nav-brand h1 {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 20px;
+    }
+
+    .hero-content h1 img {
+        height: 16px;
+    }
+
+    .card-container {
+        max-width: 290px;
+        height: 360px;
+    }
+
+    .card {
+        width: 200px;
+        height: 300px;
+    }
+
+    .card-background {
+        width: 200px;
+        height: 300px;
+    }
+
+    .card-main-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .bid-button {
+        width: 200px;
+        padding: 12px 30px;
+    }
+
+    .badge {
+        left: -45px;
+        top: 35px;
+    }
+}
+
+/* LARGE DESKTOP (1440px+) */
+@media screen and (min-width: 1440px) {
+    .navbar {
+        padding: 20px 80px;
+    }
+
+    .nav-brand h1 {
+        font-size: 34px;
+    }
+
+    .nav-links {
+        gap: 80px;
+        padding: 22px 60px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 70px;
+    }
+
+    .hero-content h1 img {
+        height: 50px;
+    }
+
+    .trending-section {
+        padding: 180px 80px;
+    }
+
+    .header-text h1 {
+        font-size: 48px;
+    }
+
+    .header-description p {
+        font-size: 18px;
+    }
+
+    .nft-cards-container {
+        gap: 40px;
+        margin-top: 200px;
+    }
+
+    .card-container {
+        width: 380px;
+        height: 480px;
+    }
+
+    .card {
+        width: 300px;
+        height: 400px;
+    }
+
+    .card-background {
+        width: 300px;
+        height: 400px;
+    }
+
+    .card-main-image img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .bid-button {
+        width: 300px;
+        padding: 20px 70px;
+        font-size: 18px;
+    }
+}
