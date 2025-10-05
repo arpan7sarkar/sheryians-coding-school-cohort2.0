@@ -10,7 +10,6 @@ You can view the deployed website at: <https://apleweb-static-clone-arpan.netlif
 
 - HTML5
 - CSS3
-- JavaScript
 
 ## How to use
 
