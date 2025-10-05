@@ -4,13 +4,6 @@ This is a simple website clone of the Freakish Mind digital art platform. The we
 
 Live: <https://freakish-mind-clone-arpan.netlify.app/>
 
-## Features
-
-* Responsive design
-* CSS Grid for layout
-* CSS Flexbox for navigation
-* CSS Variables for easy color changes
-
 ## Installation
 
 1. Clone the repository
