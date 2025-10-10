@@ -10,14 +10,13 @@
     font-family: wfBold;
     src: url(./fonts/WFVisualSans-SemiBold.woff2);
 }
-
+css
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: black;
-  color: aliceblue; */
+  
 }
 
 html, body {
@@ -28,20 +27,23 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: rgba(245, 245, 245, 0.72);
+    padding: 30px 40px;
     position: sticky;
     top: 0;
     z-index: 100;
+    font-family: Mona;
+    height: 9vh;
 }
 #nav #left-nav{
-    font-size: 18px;
+
+    font-weight: 600;
+    font-size: .87vw;
     gap: 24px;
     display: flex;
     position: absolute;
     left: 6.2vw;
     top: 50%;
-    transform: translate(20%, -50%);
+    transform: translate(36%, -50%);
 
 }
 
@@ -54,7 +56,7 @@ html, body {
 
 .btn {
     text-decoration: none;
-    font-size: 22px;   
+    font-size: 17px;   
     font-weight: 600;  
     cursor: pointer;
     transition: opacity 0.2s ease; 
