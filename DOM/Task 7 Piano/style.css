@@ -1,0 +1,101 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#upper {
+  text-align: center;
+  color: #ff6f00;
+  background-color: wheat;
+  height: 20%;
+  width: 80%;
+  font-size: 7vh;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+main {
+  height: 100%;
+  width: 100%;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+  margin: 5vh 5vh;
+}
+#piano {
+  height: 50%;
+  width: 80%;
+}
+.white {
+  height: 100%;
+  width: 7.14%;
+  background-color: white;
+  border: 1px black solid;
+}
+#big {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* border: #111111 solid; */
+  flex-shrink: none;
+  border-radius: 10px;
+}
+#small {
+  height: 25%;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  row-gap: 15%;
+  justify-content: space-around;
+  left: 1.5%;
+  top: 23%;
+  position: absolute;
+}
+.small2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 15%;
+  justify-content: center;
+  align-items: center;
+}
+.small3 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 15%;
+  justify-content: center;
+  align-items: center;
+}
+.black {
+  height: 100%;
+  width: 15%;
+  background-color: black;
+}
+.black:hover,
+.black.active {
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  transform: scale(0.98);
+}
+.white:hover,
+.white.active {
+  background-color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+.black:active,
+.white:active {
+  transform: scale(0.95);
+}
